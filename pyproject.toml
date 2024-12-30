@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "NG_OPNSense"
+version = "0.1.0"
+description = "A Python module for interacting with the OPNSense API"
+authors = [{name = "Anthony Tropeano", email = "anthonytropeano@me.com"}]
+readme = "README.md"
+dependencies = [
+    "requests>=2.32.3",
+    "urllib3>=2.3.0",
+    "pydantic>=20.10.4",
+]
