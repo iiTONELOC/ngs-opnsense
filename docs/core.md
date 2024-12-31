@@ -11,7 +11,7 @@
 │   ├── /api/dhcpv6  
 │   ├── /api/dhcrelay  
 │   ├── /api/diagnostics  
-│   ├── [`/api/firewall`](./core/firewall/)  
+│   ├── [`/api/firewall`](./core/firewall.md)  
 │   ├── /api/firmware  
 │   ├── /api/ids  
 │   ├── /api/interfaces  

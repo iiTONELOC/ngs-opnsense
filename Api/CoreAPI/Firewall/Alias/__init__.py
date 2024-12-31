@@ -13,7 +13,7 @@ class AliasController:
         self.apiSecret: str = apiSecret
         self.url: str = f"{url}/alias"
 
-    def addItem(self, alias: dict) -> str | None:
+    def addItem(self, alias: dict) -> dict | None:
         """Add an alias to the OPNSense Firewall
 
         Args:
@@ -60,7 +60,7 @@ class AliasController:
             ```
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+            `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
 
         Note:
@@ -101,14 +101,14 @@ class AliasController:
             print(f"Failed to add alias:\n{format_exc()}")
             return None
 
-    def delItem(self, uuid: str) -> str | None:
+    def delItem(self, uuid: str) -> dict | None:
         """Delete an alias from the OPNSense Firewall
 
         Args:
             `uuid (str)`: The UUID of the alias to delete
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+             `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
         """
         try:
@@ -124,11 +124,11 @@ class AliasController:
             print(f"Failed to delete alias:\n{format_exc()}")
             return None
 
-    def get(self) -> str | None:
+    def get(self) -> dict | None:
         """Get all aliases from the OPNSense Firewall
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+            `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
         """
         try:
@@ -143,14 +143,14 @@ class AliasController:
         except Exception:
             print(f"Failed to get aliases:\n{format_exc()}")
 
-    def getAliasUUID(self, name: str) -> str | None:
+    def getAliasUUID(self, name: str) -> dict | None:
         """Get an alias UUID from the OPNSense Firewall
 
         Args:
             `name (str)`: The name of the alias to get
 
         Returns:
-            `str | None`: The UUID of the alias or None if the request failed
+            `dict | None`: The UUID of the alias or None if the request failed
         """
         try:
             url = f"{self.url}/getAliasUUID/{name}"
@@ -165,11 +165,11 @@ class AliasController:
             print(f"Failed to get alias UUID:\n{format_exc()}")
             return None
 
-    def getGeoIP(self) -> str | None:
+    def getGeoIP(self) -> dict | None:
         """Get GeoIP data from the OPNSense Firewall
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+            `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
         """
         try:
@@ -185,14 +185,14 @@ class AliasController:
             print(f"Failed to get GeoIP data:\n{format_exc()}")
             return None
 
-    def getItem(self, uuid: str) -> str | None:
+    def getItem(self, uuid: str) -> dict | None:
         """Get an alias from the OPNSense Firewall
 
         Args:
             `uuid (str)`: The UUID of the alias to get
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+            `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
         """
         try:
@@ -208,11 +208,11 @@ class AliasController:
             print(f"Failed to get alias:\n{format_exc()}")
             return None
 
-    def getTableSize(self) -> str | None:
+    def getTableSize(self) -> dict | None:
         """Get the size of the alias table from the OPNSense Firewall
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+            `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
         """
         try:
@@ -228,11 +228,11 @@ class AliasController:
             print(f"Failed to get table size:\n{format_exc()}")
             return None
 
-    def listCategories(self) -> str | None:
+    def listCategories(self) -> dict | None:
         """List alias categories from the OPNSense Firewall
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+            `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
         """
         try:
@@ -248,11 +248,11 @@ class AliasController:
             print(f"Failed to list categories:\n{format_exc()}")
             return None
 
-    def listCountries(self) -> str | None:
+    def listCountries(self) -> dict | None:
         """List countries from the OPNSense Firewall
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+            `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
         """
         try:
@@ -268,11 +268,11 @@ class AliasController:
             print(f"Failed to list countries:\n{format_exc()}")
             return None
 
-    def listNetworkAliases(self) -> str | None:
+    def listNetworkAliases(self) -> dict | None:
         """List network aliases from the OPNSense Firewall
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+            `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
         """
         try:
@@ -288,11 +288,11 @@ class AliasController:
             print(f"Failed to list network aliases:\n{format_exc()}")
             return None
 
-    def listUserGroups(self) -> str | None:
+    def listUserGroups(self) -> dict | None:
         """List user groups from the OPNSense Firewall
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+            `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
         """
         try:
@@ -308,14 +308,14 @@ class AliasController:
             print(f"Failed to list user groups:\n{format_exc()}")
             return None
 
-    def searchItem(self, searchParams: str) -> str | None:
+    def searchItem(self, searchParams: str) -> dict | None:
         """Search for an alias item in the OPNSense Firewall
 
         Args:
             `searchParams (str)`: The search parameters to use when searching for the alias item
 
         Returns:
-            `str | None`: The json response from the OPNSense Firewall or None if
+            `dict | None`: The json response from the OPNSense Firewall or None if
             the request failed
         """
         try:
@@ -331,53 +331,51 @@ class AliasController:
             print(f"Failed to search for alias item:\n{format_exc()}")
             return None
 
+    def setItem(self, uuid: str, dataToSet: dict) -> dict | None:
+        """Set an alias item in the OPNSense Firewall
 
-def setItem(self, uuid: str, dataToSet: dict) -> str | None:
-    """Set an alias item in the OPNSense Firewall
+        Args:
+            `uuid (str)`: The UUID of the alias to set
+            `dataToSet (dict)`: The data to set for the alias
 
-    Args:
-        `uuid (str)`: The UUID of the alias to set
-        `dataToSet (dict)`: The data to set for the alias
+        Returns:
+            `dict | None`: The json response from the OPNSense Firewall or None if
+            the request failed
+        """
+        try:
+            url = f"{self.url}/setItem/{uuid}"
+            response = _openSenseAPI(
+                url=url,
+                apiKey=self.apiKey,
+                apiSecret=self.apiSecret,
+                data=dumps(dataToSet),
+                Method="POST",
+            )
+            return response.json()
+        except Exception:
+            print(f"Failed to set alias item:\n{format_exc()}")
+            return None
 
-    Returns:
-        `str | None`: The json response from the OPNSense Firewall or None if
-        the request failed
-    """
-    try:
-        url = f"{self.url}/setItem/{uuid}"
-        response = _openSenseAPI(
-            url=url,
-            apiKey=self.apiKey,
-            apiSecret=self.apiSecret,
-            data=dumps(dataToSet),
-            Method="POST",
-        )
-        return response.json()
-    except Exception:
-        print(f"Failed to set alias item:\n{format_exc()}")
-        return None
+    def toggleItem(self, uuid: str, enabled: bool) -> dict | None:
+        """Toggle an alias item in the OPNSense Firewall
 
+        Args:
+            `uuid (str)`: The UUID of the alias to toggle
+            `enabled (bool)`: The state to set the alias to
 
-def toggleItem(self, uuid: str, enabled: bool) -> str | None:
-    """Toggle an alias item in the OPNSense Firewall
-
-    Args:
-        `uuid (str)`: The UUID of the alias to toggle
-        `enabled (bool)`: The state to set the alias to
-
-    Returns:
-        `str | None`: The json response from the OPNSense Firewall or None if
-        the request failed
-    """
-    try:
-        url = f"{self.url}/toggleItem/{uuid}/{int(enabled)}"
-        response = _openSenseAPI(
-            url=url,
-            apiKey=self.apiKey,
-            apiSecret=self.apiSecret,
-            Method="POST",
-        )
-        return response.json()
-    except Exception:
-        print(f"Failed to toggle alias item:\n{format_exc()}")
-        return None
+        Returns:
+            `dict | None`: The json response from the OPNSense Firewall or None if
+            the request failed
+        """
+        try:
+            url = f"{self.url}/toggleItem/{uuid}/{int(enabled)}"
+            response = _openSenseAPI(
+                url=url,
+                apiKey=self.apiKey,
+                apiSecret=self.apiSecret,
+                Method="POST",
+            )
+            return response.json()
+        except Exception:
+            print(f"Failed to toggle alias item:\n{format_exc()}")
+            return None

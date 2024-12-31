@@ -1,4 +1,4 @@
-# NGS OPNSense API
+# NGS OPNSenseAPI
 
 A Python Module for interacting with the OPNSense API
 
@@ -16,13 +16,13 @@ Uses [requests](https://requests.readthedocs.io/en/latest/), [urllib3](https://g
 import json
 from NG_OPNSense import OPNSenseAPI
 
-# Create an instance of the OPNSense API
+# Create an instance of the OPNSenseAPI
 opnsense = OPNSenseAPI(
     url="https://opnsense.local",
     apiKey="myApiKey",
     apiSecret="myApiSecret")
 
-# To interact with the OPNSense API, use the same methods provided by
+# To interact with the OPNSenseAPI, use the same methods provided by
 # the OPNSense API: https://docs.opnsense.org/development/api.html
 
 # For example, to fetch aliases:
@@ -138,7 +138,7 @@ OPNsense API
 │   ├── /api/zabbixproxy  
 │   └── /api/zerotier  
 │
-└── Business Edition API
+└── Business Edition API  
     └── /api/opnbe  
 
 ## Contributing
