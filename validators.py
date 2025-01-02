@@ -6,6 +6,8 @@ OPN_SENSE_API_KEY_REGEX_PATTERN = r"^[a-zA-Z0-9+/]{80}$"
 OPN_SENSE_URL_REGEX_PATTERN = r"^https://(.*\..*|(\d{1,3}\.){3}\d{1,3})$"
 # The regex pattern for the property name
 PROPERTY_NAME_REGEX = r"^[a-zA-Z_][a-zA-Z0-9_]*$"
+# The regex pattern for country codes
+REGION_COUNTRY_CODE_LIST_REGEX = r"^(?:[A-Z]{2}\n?)+$"
 
 
 def valid(withPattern: str, againstValue: any) -> Match[str] | None:
